@@ -1,6 +1,8 @@
 ---
 - hosts: localhost
-  connection: local
+  vars:
+    zsh:
+      rc: ~/.zshrc
   roles:
   - java 
   - maven

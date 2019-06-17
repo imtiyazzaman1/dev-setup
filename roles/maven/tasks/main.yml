@@ -9,10 +9,10 @@
 
 - name: Add MAVEN_HOME to zshrc
   lineinfile: 
-    path: ~/.zshrc
+    path: "{{ zsh.rc }}"
     line: export MAVEN_HOME=/opt/apache-maven-3.6.1/bin
 
 - name: Add MAVEN_HOME to PATH
   lineinfile: 
-     path: ~/.zshrc
+     path: "{{ zsh.rc }}"
      line: export PATH=$MAVEN_HOME:$PATH
