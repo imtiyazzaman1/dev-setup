@@ -2,12 +2,12 @@
 - hosts: local
   become: yes
   roles:
-  - setup
-  - zsh
-  - java 
-  - maven
+  # - setup
+  # - zsh
+  # - java 
+  # - maven
   - dev
-  - vscode
-  - intellij
-  - spotify
-  - chrome
+  # - vscode
+  # - intellij
+  # - spotify
+  # - chrome

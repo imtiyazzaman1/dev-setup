@@ -1,7 +1,7 @@
 ---
 
-- include: oh_my_zsh.yml
-- include: z.yml
-- include: syntax_highlighting.yml
-- include: aliases.yml
+# - include: oh_my_zsh.yml
+# - include: z.yml
+# - include: syntax_highlighting.yml
+# - include: aliases.yml
 - include: git.yml
