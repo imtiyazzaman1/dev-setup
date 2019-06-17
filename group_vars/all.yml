@@ -1,1 +1,3 @@
 key_server: keyserver.ubuntu.com
+zshrc: 
+  path: "~/.zshrc"
