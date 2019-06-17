@@ -4,3 +4,4 @@
 - include: z.yml
 - include: syntax_highlighting.yml
 - include: aliases.yml
+- include: git.yml
