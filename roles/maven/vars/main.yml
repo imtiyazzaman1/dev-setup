@@ -1,0 +1,3 @@
+maven:
+  url: http://www.mirrorservice.org/sites/ftp.apache.org/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+  dir: /opt/apache-maven-3.6.1/bin

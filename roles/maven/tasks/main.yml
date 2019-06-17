@@ -2,7 +2,7 @@
 
 - name: Download Maven
   unarchive: 
-    src: http://www.mirrorservice.org/sites/ftp.apache.org/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
+    src: "{{ maven.url }}"
     dest: /opt/
     remote_src: yes
   become: yes
@@ -10,7 +10,7 @@
 - name: Add MAVEN_HOME to zshrc
   lineinfile: 
     path: "{{ zsh.rc }}"
-    line: export MAVEN_HOME=/opt/apache-maven-3.6.1/bin
+    line: export MAVEN_HOME={{ maven.dir }}
 
 - name: Add MAVEN_HOME to PATH
   lineinfile: 
