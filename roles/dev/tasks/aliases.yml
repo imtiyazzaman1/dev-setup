@@ -1,8 +1,6 @@
 - name: Add aliases
-  blockinfile:
+  lineinfile:
     path: "{{ zshrc.path }}"
-    marker: "# {mark} ANSIBLE ADDING ALIASES"
-    block: |
-      alias zshrc="vi "{{ zshrc.path }}""
-      alias source-zsh="source "{{ zshrc.path }}""
-      alias kube="kubectl"
+    line: alias {{ item.key }}="{{ item.value }}"
+  with_dict: "{{ aliases }}"
+  become: no

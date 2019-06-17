@@ -1,0 +1,6 @@
+aliases:
+  zshrc: vi ~/.zshrc
+  source-zsh: source ~/.zshrc
+  gco: git checkout
+  gst: git status
+  
