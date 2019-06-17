@@ -3,13 +3,7 @@
 - include: debian.yml
   when: ansible_os_family == 'Debian'
 
-- include: oh_my_zsh.yml
-
 - name: Change default shell
   user:
     name: imtiyaz
     shell: /usr/bin/zsh
-
-- include: z.yml
-- include: syntax_highlighting.yml
-- include: aliases.yml
