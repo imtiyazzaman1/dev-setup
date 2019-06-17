@@ -1,18 +1,15 @@
-- name: Set up apt to use repos over https
-  apt:
-    name: "{{ packages }}"
-  vars:
-    packages:
-    - apt-transport-https
-    - ca-certificates
-    - curl
-    - gnupg-agent
-    - software-properties-common
-  become: yes
+
 
 - name: Add Microsoft repo key
   apt_key: 
-    url: https://packages.microsoft.com/keys/microsoft.asc
+    keyserver: "{{ key_server }}"
+    id: BC528686B50D79E339D3721CEB3E94ADBE1229CF
+  become: yes
+
+- name: Add Microsoft repo
+  apt_repository:
+    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+    update_cache: yes
     state: present
   become: yes
 

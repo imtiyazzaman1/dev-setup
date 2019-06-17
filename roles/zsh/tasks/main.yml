@@ -9,7 +9,6 @@
   user:
     name: imtiyaz
     shell: /usr/bin/zsh
-  become: yes
 
 - include: z.yml
 - include: syntax_highlighting.yml

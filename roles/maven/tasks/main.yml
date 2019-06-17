@@ -5,7 +5,6 @@
     src: "{{ maven.url }}"
     dest: /opt/
     remote_src: yes
-  become: yes
 
 - name: Add MAVEN_HOME to zshrc
   lineinfile: 

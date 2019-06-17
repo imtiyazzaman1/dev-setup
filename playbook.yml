@@ -6,10 +6,10 @@
       path: "~/.zshrc"
   roles:
   - setup
-  # - zsh
-  # - java 
-  # - maven
-  # - vscode
-  # - intellij
-  # - spotify
+  - zsh
+  - java 
+  - maven
+  - vscode
+  - intellij
+  - spotify
   - chrome

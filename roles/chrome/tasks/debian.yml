@@ -1,19 +1,16 @@
 - name: Add Google repo key
   apt_key:
-    url: https://dl.google.com/linux/linux_signing_key.pub
-    state: present
-  become: yes
+    keyserver: "{{ key_server }}"
+    id: 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991
 
 - name: Add Google Chrome repo
   apt_repository:
     repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
     update_cache: yes
     state: present
-  become: yes
 
 - name: Install Google Chrome
   apt:
     name: google-chrome-stable
     force_apt_get: yes
     state: present
-  become: yes

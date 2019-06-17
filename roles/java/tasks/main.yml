@@ -4,7 +4,6 @@
   apt: 
     name: openjdk-11-jdk
     state: present
-  become: yes
 
 - name: Set JAVA_HOME
   lineinfile: 
