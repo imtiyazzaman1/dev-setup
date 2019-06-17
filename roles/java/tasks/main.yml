@@ -8,5 +8,5 @@
 
 - name: Set JAVA_HOME
   lineinfile: 
-    path: "{{ zsh.rc }}"
+    path: "{{ zshrc.path }}"
     line: export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64

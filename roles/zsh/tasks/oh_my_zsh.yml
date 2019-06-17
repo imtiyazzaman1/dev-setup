@@ -1,0 +1,17 @@
+- name: Download Oh My Zsh
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: ~/.oh-my-zsh
+    force: yes
+
+- name: Create .zshrc
+  copy:
+    src: ~/.oh-my-zsh/templates/zshrc.zsh-template
+    dest: "{{ zshrc.path }}"
+    force: no
+
+- name: Change zsh theme
+  replace:
+    path: "{{ zshrc.path }}"
+    regexp: '^ZSH_THEME="robbyrussell"'
+    replace: ZSH_THEME="bira"

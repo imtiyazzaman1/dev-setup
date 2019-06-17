@@ -1,0 +1,9 @@
+- name: Download syntax highlighting repo
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: ~/.oh-my-zsh/zsh-syntax-highlighting
+
+- name: Add syntax highlighting to zshrc
+  lineinfile:
+    path: "{{ zshrc.path }}"
+    line: source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

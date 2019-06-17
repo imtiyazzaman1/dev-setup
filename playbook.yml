@@ -1,8 +1,9 @@
 ---
 - hosts: localhost
   vars:
-    zshrc: "~/.zshrc"
+    zshrc: 
+      path: "~/.zshrc"
   roles:
   - zsh
-  # - java 
-  # - maven
+  - java 
+  - maven

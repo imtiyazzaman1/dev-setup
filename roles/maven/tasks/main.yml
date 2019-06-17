@@ -9,10 +9,10 @@
 
 - name: Add MAVEN_HOME to zshrc
   lineinfile: 
-    path: "{{ zsh.rc }}"
+    path: "{{ zshrc.path }}"
     line: export MAVEN_HOME={{ maven.dir }}
 
 - name: Add MAVEN_HOME to PATH
   lineinfile: 
-     path: "{{ zsh.rc }}"
+     path: "{{ zshrc.path }}"
      line: export PATH=$MAVEN_HOME:$PATH
