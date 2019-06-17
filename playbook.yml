@@ -1,13 +1,15 @@
 ---
 - hosts: local
+  become: yes
   vars:
     zshrc: 
       path: "~/.zshrc"
   roles:
-  - zsh
-  - java 
-  - maven
-  - vscode
-  - intellij
-  - spotify
+  - setup
+  # - zsh
+  # - java 
+  # - maven
+  # - vscode
+  # - intellij
+  # - spotify
   - chrome
