@@ -1,7 +1,7 @@
 
 
 - name: Add Microsoft repo key
-  apt_key: 
+  apt_key:
     keyserver: "{{ key_server }}"
     id: BC528686B50D79E339D3721CEB3E94ADBE1229CF
   become: yes
@@ -16,4 +16,5 @@
 - name: Install VSCode
   apt:
     name: code
+    force_apt_get: yes
   become: yes

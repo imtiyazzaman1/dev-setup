@@ -1,7 +1,8 @@
 ---
 
 - name: Debian | Download zsh
-  apt: 
+  apt:
     name: zsh
     state: present
-
+  become: yes
+    

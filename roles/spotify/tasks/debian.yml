@@ -2,13 +2,18 @@
   apt_key:
     keyserver: "{{ key_server }}"
     id: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+  become: yes
+
 
 - name: Add Spotify repo
   apt_repository:
     repo: deb http://repository.spotify.com stable non-free
     update-cache: yes
+  become: yes
 
 - name: Install Spotify
   apt:
     name: spotify-client
     force_apt_get: yes
+  become: yes
+    

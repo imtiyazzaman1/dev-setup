@@ -1,11 +1,12 @@
 ---
 
 - name: Install JDK 11
-  apt: 
+  apt:
     name: openjdk-11-jdk
     state: present
+  become: yes
 
 - name: Set JAVA_HOME
-  lineinfile: 
+  lineinfile:
     path: "{{ zshrc.path }}"
     line: export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64

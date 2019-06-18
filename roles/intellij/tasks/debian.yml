@@ -1,4 +1,5 @@
-- name: Install IntelliJ via Snap
-  snap:
-    name: intellij-idea-community 
-    classic: yes
+# - name: Install IntelliJ via Snap
+#   snap:
+#     name: intellij-idea-community
+#     classic: yes
+#   become: yes

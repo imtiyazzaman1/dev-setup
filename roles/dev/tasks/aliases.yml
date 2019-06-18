@@ -3,4 +3,3 @@
     path: "{{ zshrc.path }}"
     line: alias {{ item.key }}="{{ item.value }}"
   with_dict: "{{ aliases }}"
-  become: no

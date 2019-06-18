@@ -1,17 +1,18 @@
 ---
 
 - name: Download Maven
-  unarchive: 
+  unarchive:
     src: "{{ maven.url }}"
     dest: /opt/
     remote_src: yes
-
+  become: yes
+  
 - name: Add MAVEN_HOME to zshrc
-  lineinfile: 
+  lineinfile:
     path: "{{ zshrc.path }}"
     line: export MAVEN_HOME={{ maven.dir }}
 
 - name: Add MAVEN_HOME to PATH
-  lineinfile: 
+  lineinfile:
      path: "{{ zshrc.path }}"
      line: export PATH=$MAVEN_HOME:$PATH
