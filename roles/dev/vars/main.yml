@@ -3,4 +3,13 @@ aliases:
   source-zsh: source ~/.zshrc
   gco: git checkout
   gst: git status
-  
+  dps: docker ps
+  dls: docker image ls
+  de: docker exec
+  dr: docker run
+  ds: docker start
+  di: docker inspect
+  drmi: docker rmi
+  dc: docker container
+  dcrm: docker container rm
+  dv: docker volume
