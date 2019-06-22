@@ -1,0 +1,8 @@
+- name: Add universe repo
+  command: sudo add-apt-repository universe
+
+- name: Install GNOME tweak tool
+  apt:
+    name: gnome-tweak-tool
+    state: present
+  become: yes
