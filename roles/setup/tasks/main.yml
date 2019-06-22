@@ -1,4 +1,4 @@
-- name: Set up apt to use repos over https
+- name: Install setup packages
   apt:
     name: "{{ packages }}"
   vars:
@@ -8,5 +8,6 @@
     - curl
     - gnupg-agent
     - software-properties-common
+    - snapd
+    - git
   become: yes
-    
