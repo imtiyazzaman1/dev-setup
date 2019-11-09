@@ -1,14 +1,14 @@
 ---
 - hosts: local
   roles:
-  # - setup
-  # - zsh
-  # - dev
-  # - java
-  # - maven
-  # - vscode
-  # - intellij
-  # - spotify
-  # - chrome
+  - setup
+  - zsh
+  - dev
+  - java
+  - maven
+  - vscode
+  - intellij
+  - spotify
+  - chrome
   - { role: linux_tweaks, when: ansible_os_family == 'Debian' }
   
