@@ -25,9 +25,4 @@
   changed_when: "'already installed' not in vscode_result.stdout"
   with_items:
     - shan.code-settings-sync
-
-- name: Add syncLocalSettings.json
-  copy:
-    src: syncLocalSettings.json
-    dest: "{{ code_settings_dir }}"
     
