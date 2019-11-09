@@ -1,9 +1,0 @@
-- name: Download z
-  get_url:
-    url: https://github.com/rupa/z/blob/master/z.sh
-    dest: ~/.oh-my-zsh/
-
-- name: Add z to zshrc
-  lineinfile:
-    path: "{{ zshrc.path }}"
-    line: . ~/.oh-my-zsh/z.sh
