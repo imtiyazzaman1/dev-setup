@@ -1,0 +1,23 @@
+---
+
+- name: Download Node.js PPA script
+  get_url:
+    url: https://deb.nodesource.com/setup_12.x
+    dest: /tmp/
+    mode: ugo+rwx
+
+- name: Run Node.js PPA script
+  shell: /tmp/setup_12.x
+  become: yes
+
+- name: Delete Node.js PPA script
+  file:
+    path: /tmp/setup_12.x
+    state: absent
+
+- name: Install Node.js
+  apt:
+    name: nodejs
+    state: present
+    update_cache: yes
+  become: yes
