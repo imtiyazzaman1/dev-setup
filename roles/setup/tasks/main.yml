@@ -10,4 +10,5 @@
     - software-properties-common
     - snapd
     - git
+    - python3-pip
   become: yes

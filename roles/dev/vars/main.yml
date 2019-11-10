@@ -1,4 +1,5 @@
 aliases:
+  pip: pip3
   zshrc: vi ~/.zshrc
   source-zsh: source ~/.zshrc
   gco: git checkout
