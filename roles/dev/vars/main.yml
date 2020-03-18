@@ -14,3 +14,4 @@ aliases:
   dc: docker container
   dcrm: docker container rm
   dv: docker volume
+  fusuma: fusuma & disown

@@ -1,3 +1,7 @@
+- name: add to input group
+  command: gpasswd -a $USER input
+  become: yes
+
 - name: Install setup packages
   apt:
     name: "{{ packages }}"
@@ -10,5 +14,14 @@
     - software-properties-common
     - snapd
     - git
+    - libinput-tools
+    - ruby
+    - xdotool
     - python3-pip
+  become: yes
+
+- name: Install Fusuma
+  gem:
+    name: fusuma
+    state: latest
   become: yes
